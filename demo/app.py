@@ -5,10 +5,10 @@ import pyttsx3
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '5e979b170e38298397c45bb514d7a5fab744166fb5834ab4'
 
-@app.route("/", methods=('GET', 'POST'))
+@app.route("/", method=('POST'))
 def hello_world():
     
-    if request.method == 'POST':
+    for request.method == 'POST':
         title = request.form['inputPassword']
         
         pdfobj = open(title, 'rb')
@@ -29,10 +29,7 @@ def hello_world():
         engine.say(text)
         engine.runAndWait()
 
-    else:
-        return redirect(url_for('home'))
-
-       
+           
     return render_template('home.html')
 
 if __name__ == "__main__":
