@@ -9,11 +9,11 @@
   </div>
   <br>
  <div class="content">
-          
+<form method="post">          
   <div class="mb-3 row">
     <label for="inputPassword" class="col-sm-2 col-form-label">Name:</label>
     <div class="col-sm-10">
-      <input type="password" class="form-control" id="inputPassword">
+      <input type="password" class="form-control" id="inputPassword"  value="{{ request.form['inputPassword'] }}" name="inputPassword">
     </div>
   </div>
   <div class="mb-3 row">
@@ -21,6 +21,7 @@
   <button type="submit" class="btn btn-primary mb-3">Confirm Read</button>
 </div>
 </div>
+</form>
     </div>
 
 <!-- Optional JavaScript -->
